@@ -6,7 +6,7 @@ name = "pfoxnh2w4oo2jfypv5oyh7j68"
 dynamic = ["version"]
 
 requires-python = ">= 3.14"
-dependencies = []
+dependencies = ["pyside6>=6.9.3,<7"]
 
 authors = [{name = "Jevan Goh", email = "javerngoh@gmail.com"}]
 
@@ -34,10 +34,11 @@ docs = [
 ######################################################################################################
 [tool.pixi.workspace]
 channels = ["conda-forge"]
-platforms = ["win-64", "linux-64", "linux-aarch64"]
+platforms = ["win-64", "linux-64"]
+# , "linux-aarch64"]
 
-[tool.pixi.target.linux-aarch64.activation]
-env = { LD_LIBRARY_PATH = "$LD_LIBRARY_PATH:$CONDA_PREFIX/lib" }
+# [tool.pixi.target.linux-aarch64.activation]
+# env = { LD_LIBRARY_PATH = "$LD_LIBRARY_PATH:$CONDA_PREFIX/lib" }
 
 [tool.pixi.pypi-options]
 extra-index-urls = ["https://jevangoh.github.io/as1oocnl0leb61sj1yew20lt2/"]
