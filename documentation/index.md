@@ -2,7 +2,7 @@
 
 [[repository]](https://github.com/jevangoh/pfoxnh2w4oo2jfypv5oyh7j68) [[documentation]](https://pfoxnh2w4oo2jfypv5oyh7j68.readthedocs.io/en/latest/)
 
-A reactive python object class
+A python descriptor to create reactive python object based on input datatype
 
 <!-- do not remove or edit this section -->
 
