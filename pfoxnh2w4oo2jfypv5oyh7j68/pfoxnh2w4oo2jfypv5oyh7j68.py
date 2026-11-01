@@ -1,4 +1,4 @@
-from typing import Optional, Callable
+from typing import Optional, Callable, cast
 
 from PySide6.QtCore import Property, Signal
 
@@ -15,7 +15,11 @@ def pfoxnh2w4oo2jfypv5oyh7j68[Type](
 
         def __init__(self, value: Optional[Type] = None):
             if value is None:
-                value = default if isinstance(default, datatype) else default()
+                value = (
+                    default
+                    if isinstance(default, datatype)
+                    else cast(Callable[[], Type], default)()
+                )
             super().__init__(value)
 
         value = Property(
