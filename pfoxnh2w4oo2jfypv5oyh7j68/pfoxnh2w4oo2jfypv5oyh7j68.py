@@ -18,16 +18,10 @@ def pfoxnh2w4oo2jfypv5oyh7j68[Type](
                 value = default if isinstance(default, datatype) else default()
             super().__init__(value)
 
-        def set_value(self, new_value: Type):
-            if self._value != new_value:
-                self._value = new_value
-                self.value_changed.emit(self._value)
-                self.valueChanged.emit(self._value)
-
-        value: Type = Property(
+        value = Property(
             data_type,
-            fget=ReadableAndWritableDependency._[Type].get_value,
-            fset=set_value,
+            fget=ReadableAndWritableDependency._[Type].value.fget,
+            fset=ReadableAndWritableDependency._[Type].value.fset,
             notify=valueChanged,
         )
 
